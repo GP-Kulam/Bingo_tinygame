@@ -1,0 +1,716 @@
+html, body {
+    height: 100%;
+    margin: 0%;
+}
+
+
+
+
+.loader-wrapper {
+    background-color: rgb(248, 248, 248);
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    margin: auto;
+    right: 0;
+    bottom: 0;
+    z-index: 2;
+    cursor: inherit;
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+}
+.loader {
+    border: 2px solid rgb(0, 0, 0);
+    height: 40px;
+    width: 40px;
+    display: block;
+    animation: rotate 0.6s infinite linear;
+    
+}
+@keyframes rotate {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+
+}
+
+aside {
+    background-color: rgb(255, 255, 255);
+    height: 100%;
+    width: 25%;
+    float: left;
+    text-align: center;
+    color: rgb(68, 68, 68);
+}
+header {
+    background-color: rgb(255, 255, 255);
+    height: 100%;
+    width: 25%;
+    float: right;
+    text-align: center;
+    color: rgb(68, 68, 68);
+    
+}
+
+p {
+    color: rgb(117, 117, 117);
+    margin-top: 50px;
+    margin-left: 10px; 
+    margin-right: 10px; 
+    line-height: 35px;
+    font-size: 18px;
+    font-family: Comic sans MS;
+}
+.about {
+    height: 0%;
+    width: 0%;
+    display: none;
+}
+.about h1, .about p {
+    position: relative;
+    font-size: 20px;
+    display: none;
+}
+
+aside h1, header h1, .about h1 {
+    margin-top: 60px;
+    color: rgb(71, 71, 71);
+    font-family: monaco;
+}
+
+
+.game-wrapper {
+    background-color: rgb(255, 255, 255);
+    height: 100%;
+    width: 50%;
+    overflow: hidden;
+    float: right;
+    text-align: center;
+    
+    
+    
+    
+}
+
+.line-between {
+    margin: 0;
+    display: none;
+    
+}
+
+
+
+
+.title {
+    position: absolute;
+    text-align: center;
+    font-size: 24px;
+    color: rgb(80, 79, 79);
+    font-family: monaco;
+    margin-top: 10px;
+    width: 50%;
+    
+}
+
+.scoreboard {
+    width: 50%;
+    position: absolute;
+    font-size: 24px;
+    color: rgb(80, 79, 79);
+    font-family: monaco;
+    line-height: 30px;
+    margin-top: 10px;
+    display: none;
+    
+}
+
+.scoreboard #label1 {
+    font-size: 18px;
+    font-weight: bold;
+    font-family: Arial, Helvetica, sans-serif;
+    color: #3a4d3a;
+}
+
+.scoreboard #score {
+    font-size: 34px;
+    font-weight: bold;
+    opacity: 10%;
+    font-family: consolas;
+    
+}
+
+
+.gameboard {
+    position: relative;
+    background-color: rgb(75, 71, 71);
+    margin: auto;
+    width: 600px;
+    height: 600px;
+    margin-top: 100px;
+    
+}
+
+.newgame {
+    margin-left: 20px;
+    top: 10px;
+    position: relative;
+    float: left;
+    font-size: 15px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    box-shadow: 2px 6px 10px rgb(56, 55, 55);
+    cursor: pointer;
+    background-color: #498361;
+    border-style: none;
+    color: #fff;
+    border-radius: 50px;
+    width: 110px;
+    height: 40px;
+    font-weight: bold;
+}
+.newgame:focus {
+    outline: none;
+}
+
+.newgame:hover {
+    background-color: #325a43;
+}
+
+.result {
+    background-color: transparent;
+    margin: auto;
+    position: relative;
+    width: 400px;
+    height: 80px;
+    top: 40px;
+    
+}
+
+#B, #I, #N, #G, #O {
+
+    
+    background-color: transparent;
+    border: none;
+    width: 60px;
+    height: 80px;
+    margin-left: -10px;
+    font-size: 40px;
+    font-family: MV Boli;
+    text-align: center;
+    
+   
+    
+}
+
+
+
+
+#B-l, #B {
+
+    color: #FF00D5;
+    font-family: MV Boli;
+    
+    
+}
+
+#I-l, #I {
+
+    color: #02F8FF;
+    font-family: MV Boli;
+}
+
+#N-l, #N {
+
+    color: #f7ff04;
+    font-family: MV Boli;
+}
+
+#G-l, #G {
+    color: #08FF06;
+    font-family: MV Boli;
+}
+
+#O-l, #O {
+
+    color: #FF5555;
+    font-family: MV Boli;
+}
+
+
+
+
+
+.buttons-wrapper {
+    
+    margin: auto;
+    width: 390px;
+    height: 396px;
+    margin-top: 80px;
+    position: relative;
+    margin-left: 100px;
+    border: 2px solid rgb(151, 151, 151);
+    
+    
+    
+
+}
+
+#row {
+    width: 400px;
+    height: 80px;
+    display: block;
+    margin-top: -1px;
+    position: relative;
+    margin-left: -1px;
+}
+
+
+.buttons {
+    background-color: #68918a;
+    width: 80px;
+    height: 80px;
+    border: none;
+    cursor: pointer;
+    color: #ffffff;
+    text-align: center;
+    font-size: 34px;
+    font-weight: bold;
+    font-family: comic sans MS;
+    border: 0.5px solid rgb(66, 66, 66);
+    position: relative;
+    margin-left: -7px;
+       
+}
+
+#B1{
+    margin-top: 2px;
+}
+
+.buttons:focus {
+    outline: none;
+}
+
+footer {
+    position: relative;
+    top: 100px;
+    text-align: center;
+    font-family: monaco;
+}
+
+footer .fa-instagram {
+    position: relative;
+    top: 10px;
+    font-size: 40px;
+}
+
+@media screen and (max-width: 1330px) {
+
+    .result {
+        top: 10px;
+    }
+
+    header, header h1, header p {
+        height: 0%;
+        display: none;
+    }
+    header footer {
+        width: 0;
+        height: 0;
+        display: none;
+    }
+
+   
+    aside {
+        float: none;
+        margin: auto;
+        height: 350px;
+        width: 600px;
+
+    }
+    aside h1 {
+        margin: auto;
+        
+
+    }
+    aside p {
+        
+        margin: auto;
+        margin-top: 40px;
+        margin-left: 20px;
+        margin-right: 20px;
+
+
+    }
+
+    
+    .about {
+        float: none;
+        height: 300px;
+        width: 600px;
+        margin: auto;
+        margin-top: 80px;
+        text-align: center;
+        color: rgb(68, 68, 68);
+        position: relative;
+        display: block;
+        
+    }
+    .about h1 {
+        margin: auto;
+        display: block;
+
+    }
+    .about p {
+
+        margin: auto;
+        margin-top: 40px;
+        margin-left: 20px;
+        margin-right: 20px;
+        display: block;
+
+    }
+    .game-wrapper {
+        float: none;
+        width: 100%;
+        height: 900px;
+        margin: auto;
+        
+        
+        
+    }
+    .title  {
+        width: 100%;
+    }
+
+    .scoreboard {
+        width: 100%;
+    }
+
+    .result {
+        top: 60px;
+    }
+    .gameboard {
+        margin-top: 100px;
+    
+        
+    }
+
+    .line-between {
+        margin: auto;
+        margin-top: 50px;
+        width: 300px;
+        border-top: 1.5px solid rgb(128, 104, 104);
+        display: block;
+        opacity: 50%;
+        
+    }
+
+    
+}
+
+@media screen and (max-width: 800px){
+
+
+    
+
+
+    .result {
+        width: 300px;
+        margin-right: 20px;
+       top: 10px;
+    }
+
+    #B,#I,#N,#G,#O {
+        width: 60px;
+        font-size: 30px;
+        
+    }
+
+    .gameboard {
+        width: 480px;
+        height: 490px;
+    }
+
+    .buttons-wrapper {
+        width: 398px;
+        height: 380px;
+        margin: auto;
+        margin-top: 15px;
+    }
+
+    .buttons-wrapper {
+        width: 391px;
+        height: 384px;
+    }
+    #row {
+
+        border: none;
+        width: 400px;
+        height: 77px;
+        margin-top: -1px;
+        
+    }
+
+    aside, .about {
+        width: 480px;
+
+    }
+
+    aside p , .about p {
+        font-size: 14px;
+    }
+
+    .line-between {
+        width:  200px;
+    }
+    
+}
+
+
+
+@media screen and (max-width: 480px) {
+
+
+    .result {
+        
+        margin: auto;
+        position: relative;
+        width: 250px;
+        height: 40px;
+        top: 30px;
+    
+        
+    }
+    
+    #B, #I, #N, #G, #O {
+    
+        
+        width: 50px;
+        height: 40px;
+        margin-left: -15px;
+        font-size: 24px;
+        font-family: MV Boli;
+       
+        
+    }
+    
+
+    .loader {
+        height: 30px;
+        width: 30px;
+    }
+
+    header, header h1, header p {
+        height: 0%;
+        display: none;
+    }
+
+    aside {
+        float: none;
+        margin: auto;
+        height: 250px;
+        width: 340px;
+
+    }
+    aside h1, .about h1 {
+        margin: auto;
+        font-size: 20px;
+        
+
+    }
+    aside p {
+        
+        margin: auto;
+        margin-top: 20px;
+        margin-left: 10px;
+        margin-right: 10px;
+        line-height: 24px;
+        font-size: 14px;
+
+    }
+
+    
+    .about {
+        float: none;
+        height: 200px;
+        width: 340px;
+        margin: auto;
+        margin-top: 60px;
+        display: block;
+        
+    }
+    
+    .about p {
+
+        margin: auto;
+        margin-top: 20px;
+        margin-left: 10px;
+        margin-right: 10px;
+        line-height: 24px;
+        font-size: 14px;
+        display: block;
+
+    }
+   
+    .title {
+        font-size: 14px;
+
+    }
+.scoreboard {
+    font-size: 14px;
+
+}
+
+    .game-wrapper {
+        float: none;
+        height: 100%;
+    }
+    .gameboard {
+        width: 340px;
+        height: 340px;
+        margin-top: 90px;
+        
+        
+    }
+    
+    
+    .newgame {
+        margin-left: 5px;
+        top: 5px;
+        font-size: 12px;
+        width: 80px;
+        height: 25px;
+        font-weight: 200;
+    }
+
+    
+    
+    
+    
+
+    
+    .buttons-wrapper {
+        width: 242px;
+        height: 241px;
+        margin-top: 40px;
+        margin-left: 55px;
+        
+    
+    }
+
+    #row {
+        border: none;
+        width: 250px;
+        height: 50px;
+        margin-top: -2px;
+    }
+    #row:first-child {
+        top: 2px;
+    }
+    
+    .buttons {
+        width: 50px;
+        height: 50px;
+        font-size: 16px;
+        
+        
+           
+    }
+
+    .line-between {
+        margin: auto;
+        margin-top: 50px;
+        width: 150px;
+        border-top: 1px solid rgb(128, 104, 104);
+        display: block;
+        
+    }
+    
+    
+}
+
+@media screen and (max-width: 360px) {
+    .gameboard {
+        width: 300px;
+        height: 300px;
+    }
+    .buttons-wrapper {
+        border: none;
+        margin: auto;
+        width: 211px;
+        height: 214px;
+        margin-top: 35px;
+    }
+    #row {
+        width: 220px;
+        height: 40px;
+        margin: auto;
+        margin-top: 2px;
+        margin-left: -1px;
+        
+    }
+
+    #row:first-child {
+        top: -3px;
+        
+    }
+
+    .buttons {
+        width: 45px;
+        height: 45px;
+    }
+
+
+    aside h1, .about h1 {
+        font-size: 14px;
+    }
+
+    aside, .about {
+        width: 300px;
+    }
+    aside p, .about p {
+        font-size: 10px;
+    }
+
+    footer {
+        font-size: 10px;
+    }
+
+    footer .fa-instagram {
+        font-size: 30px;
+    }
+
+    .line-between {
+        margin-top: 10px;
+        opacity: 50%;
+    }
+
+    .result {
+        
+       
+        width: 150px;
+        height: 30px;
+        top: 30px;
+    
+        
+    }
+    
+    #B, #I, #N, #G, #O {
+    
+        
+        width: 35px;
+        height: 30px;
+        margin-left: -15px;
+        font-size: 20px;
+        font-family: MV Boli;
+        
+       
+        
+    }
+}

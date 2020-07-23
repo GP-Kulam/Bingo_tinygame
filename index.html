@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bingo</title>
+    <link rel = "icon" href ="web-icon.png" type = "image/x-icon"> 
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="popup.css">
+
+    <!--javscript-->
+    <script type="text/javascript" src="main.js"></script>
+    <script type="text/javascript" src="ComputerScript.js"></script>
+    
+
+    <!--Font awsome-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+   
+     <!--jquery-->
+     <!--<script src="https://ajax.googleapis.com/ajax/libs/jquery-2.1.4.js"></script>-->
+    <script src="./jquery-2.1.4.js"></script>
+    
+     
+     
+
+    <!--bootstrap-->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+</head>
+
+
+<body>
+
+    
+
+   
+    
+
+    <header>
+        <h1>About</h1>
+        <p>This tiny game is developed for entertainment and tried best in
+            the game. This game is usually played in two players. The 
+            game is developed such that the other player is a computer.
+            We hope this will reminds your childhood !!
+        </p>
+        <footer>Follw me on instagram
+            <br>
+             <a style="text-decoration: none; color: rgb(88, 87, 87);" href="https://www.instagram.com/gangadhark07/">
+                <i class="fa fa-instagram" ></i>
+            </a>
+        </footer>
+    </header>
+    
+    
+    <div class="game-wrapper">
+
+        <div id="title" class="title">say
+            <span id="B-l">B</span>
+            <span id="I-l">I</span>
+            <span id="N-l">N</span>
+            <span id="G-l">G</span>
+            <span id="O-l">O</span>    first<br>and won the game
+            
+         </div>
+         <div id="scoreboard" class="scoreboard">
+            <label id="label1" for="opponet">opponant's score</label><br>
+            <label id="score" for="score">0</label>
+        </div>
+           
+        
+        <div class="gameboard">
+
+            <!---->
+    <div class="top" id="win" >
+        <div id="results">
+            <p>Congratulations you won the game</p>
+           <img src="./winning-1.png" id="smile" alt="">
+            <button onclick="LabelingGameBoard()" type="button" id="try-again" >try again</button>
+        </div>
+      </div>
+      <div class=" top" id="lose" >
+        <div id="results">
+            <p>You lost it !</p>
+            <img id="smile" src="./ssad.png" alt="">
+            <button onclick="LabelingGameBoard()" type="button" id="try-again" >try again</button> 
+        </div>
+      </div>
+      <div class="top" id="tie" >
+        <div id="results">
+            <p>it's a tie</p>
+            <button onclick="LabelingGameBoard()" type="button" id="try-again" >try again</button> 
+        </div>
+      </div>
+        
+    <!---->
+            
+            <button class="newgame" id="play" onclick="LabelingGameBoard()"  >New game</button>
+            
+                <div class="result">
+                    <button disabled ="true" id="B"></button>
+                    <button disabled ="true" id="I"></button>
+                    <button disabled ="true" id="N"></button>
+                    <button disabled ="true" id="G"></button>
+                    <button disabled ="true" id="O"></button>
+                </div>
+               
+            
+            <div class="buttons-wrapper">
+                <div id="row">
+                    <Button  id = "B1"  onclick="EnterValues('B1',document.getElementById('B1').innerHTML)"class= "buttons" ></Button>
+                    <Button  id = "B2" onclick="EnterValues('B2',document.getElementById('B2').innerHTML)" class= "buttons" ></Button>
+                    <Button  id = "B3"  onclick="EnterValues('B3',document.getElementById('B3').innerHTML)"class= "buttons" ></Button>
+                    <Button  id = "B4"  onclick="EnterValues('B4',document.getElementById('B4').innerHTML)"class= "buttons" ></Button>
+                    <Button  id = "B5"  onclick="EnterValues('B5',document.getElementById('B5').innerHTML)"class= "buttons" ></Button>
+    
+                </div>
+
+                <div id="row">
+                    <Button  id = "B6" onclick="EnterValues('B6',document.getElementById('B6').innerHTML)" class= "buttons" ></Button>
+                    <Button  id = "B7" onclick="EnterValues('B7',document.getElementById('B7').innerHTML)" class= "buttons" ></Button>
+                    <Button  id = "B8" onclick="EnterValues('B8',document.getElementById('B8').innerHTML)" class= "buttons" ></Button>
+                    <Button  id = "B9" onclick="EnterValues('B9',document.getElementById('B9').innerHTML)" class= "buttons" ></Button>
+                    <Button  id = "B10" onclick="EnterValues('B10',document.getElementById('B10').innerHTML)" class= "buttons"></Button>
+    
+                </div>
+                <div id="row">
+                    <Button  id = "B11" onclick="EnterValues('B11',document.getElementById('B11').innerHTML)" class= "buttons" ></Button>
+                    <Button  id = "B12" onclick="EnterValues('B12',document.getElementById('B12').innerHTML)" class= "buttons" ></Button>
+                    <Button  id = "B13" onclick="EnterValues('B13',document.getElementById('B13').innerHTML)" class= "buttons" ></Button>
+                    <Button  id = "B14" onclick="EnterValues('B14',document.getElementById('B14').innerHTML)" class= "buttons" ></Button>
+                    <Button  id = "B15" onclick="EnterValues('B15',document.getElementById('B15').innerHTML)" class= "buttons" ></Button>
+    
+                </div>
+                <div id="row">
+                    <Button  id = "B16" onclick="EnterValues('B16',document.getElementById('B16').innerHTML)" class= "buttons" ></Button>
+                    <Button  id = "B17" onclick="EnterValues('B17',document.getElementById('B17').innerHTML)" class= "buttons" ></Button>
+                    <Button  id = "B18" onclick="EnterValues('B18',document.getElementById('B18').innerHTML)" class= "buttons" ></Button>
+                    <Button  id = "B19" onclick="EnterValues('B19',document.getElementById('B19').innerHTML)" class= "buttons" ></Button>
+                    <Button  id = "B20" onclick="EnterValues('B20',document.getElementById('B20').innerHTML)" class= "buttons" ></Button>
+    
+                </div>
+                <div id="row">
+                    <Button  id = "B21" onclick="EnterValues('B21',document.getElementById('B21').innerHTML)" class= "buttons" ></Button>
+                    <Button  id = "B22" onclick="EnterValues('B22',document.getElementById('B22').innerHTML)" class= "buttons" ></Button>
+                    <Button  id = "B23" onclick="EnterValues('B23',document.getElementById('B23').innerHTML)" class= "buttons" ></Button>
+                    <Button  id = "B24" onclick="EnterValues('B24',document.getElementById('B24').innerHTML)" class= "buttons" ></Button>
+                    <Button  id = "B25" onclick="EnterValues('B25',document.getElementById('B25').innerHTML)" class= "buttons" ></Button>
+                    
+                </div>
+
+                <br>
+            </div>
+        </div>
+    
+    
+    </div>
+    <div class="loader-wrapper">
+        <span class="loader"></span>
+    </div>
+    <script>
+        $(window).on("load",function(){
+            $(".loader-wrapper").fadeOut("slow");
+        });
+
+        $("#play").click(function () {
+            $("#title").fadeOut(1000);
+            $("#scoreboard").fadeIn(1000);
+            
+        });
+
+        
+    </script>
+    
+    <aside class="aside-class" >
+        <h1>How to play ??</h1>
+        <p>To play this game You have to click on the start the game button.
+            Then it will open a game board for you which is consist of 5 X 5 table
+            after that you have to click fill table button 
+            to fill table by the
+            numbers from 1 to 25 randomly. <br>
+            Then you have select your numberafter 
+            that computer will select a random.
+            who will complete the 5 adscnet number by 
+            rows columns or diagonal
+            will be the winner.
+        </p> 
+    </aside>
+    <hr class="line-between">
+    
+    <div class="about">
+
+        <h1>About the game</h1>
+        <p>This tiny game is developed for entertainment and tried best in
+            the game. This game is usually played in two players. The 
+            game is developed such that the other player is a computer.
+            We hope this will reminds your childhood !!
+        </p>
+
+        <footer>Follw me on instagram
+            <br>
+             <a style="text-decoration: none; color: rgb(88, 87, 87);" href="https://www.instagram.com/gangadhark07/">
+                <i class="fa fa-instagram" ></i>
+            </a>
+        </footer>
+    </div>
+    
+    
+    
+   
+    
+        
+</body>
+</html>

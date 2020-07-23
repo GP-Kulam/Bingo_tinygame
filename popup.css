@@ -1,0 +1,165 @@
+.top {
+background-color: rgba(82, 82, 82, 0.877);
+position: absolute;
+width: 600px;
+height: 600px;
+margin: auto;
+top: 0px;
+left: 0;
+right: 0;
+bottom: 0;
+z-index: 2;
+cursor: inherit;
+display: flex;
+text-align: center;
+display: none;
+
+
+}
+
+#results {
+
+width: 400px;
+height: 400px;
+margin: auto;
+text-align: center;
+position: relative;
+top: 170px;
+
+
+}
+
+#results p {
+margin: auto;
+margin-top: 100px;
+line-height: 40px;
+font-size: 40px;
+color: #ffffff;
+font-family: 'Courier New', Courier, monospace;
+font-weight: bold;
+
+}
+
+#try-again {
+position: relative;
+width: 150px;
+height: 50px;
+font-weight: bold;
+border-radius: 10px;
+color: #ffffff;
+background-color: rgb(54, 54, 54);
+font-family: monaco;
+margin-top: 24px;
+border: none;
+
+}
+#try-again:hover {
+background-color: rgb(49, 209, 0);
+box-shadow: 2px 4px 10px rgb(51, 51, 51);
+color: #ffffff;
+}
+
+#smile {
+width: 80px;
+opacity: 60%;
+margin-left: 30px;
+margin-right: 40px;
+
+}
+
+/***
+media screen responsive**/
+
+@media screen and (max-width: 1330px) {
+    .top {
+        width: 600px;
+        height: 600px;
+    }
+    #results {
+        margin: auto;
+        
+    }
+    
+}
+
+@media screen and (max-width: 800px) {
+    .top {
+        width: 480px;
+        height: 480px;
+    }
+
+    #results {
+        top: 80px;
+    }
+
+}
+
+@media screen and (max-width: 480px) {
+    
+   .top {
+       width: 340px;
+       height: 340px;
+   }
+
+    #results {
+        width: 240px;
+        height: 240px;
+        margin: auto;
+        top: 80px;
+        text-align: center;
+        
+    }
+    #results p {
+        margin: auto;
+        margin-top: 20px;
+        line-height: 20px;
+        font-size: 23px;
+    
+    }
+
+    #try-again {
+    margin: auto;
+    margin-top: 20px;
+    font-size: 14px;
+    width: 100px;
+    height: 30px;
+
+}
+
+#smile {
+width: 80px;
+opacity: 60%;
+margin-top: 10px;
+margin-right: 10px;
+}
+
+
+}
+
+@media screen and (max-width: 360px) {
+    .top {
+
+        width: 300px;
+        height: 300px;
+    }
+    #results {
+        width: 220px;
+        height: 220px;
+        top: 80px;
+    }
+
+    #results p {
+        font-size: 20px;
+    }
+
+    #smile {
+        width: 50px;
+    }
+
+    #try-again {
+        width: 90px;
+        font-size: 12px;
+    }
+}
+
+    
