@@ -526,7 +526,7 @@ footer .fa-linkedin {
     }
     aside h1, .about h1 {
         margin: auto;
-        font-size: 20px;
+        font-size: 22px;
         
 
     }
@@ -678,10 +678,6 @@ footer .fa-linkedin {
         height: 45px;
     }
 
-
-    aside h1, .about h1 {
-        font-size: 18px;
-    }
 
     aside, .about {
         width: 300px;
