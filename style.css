@@ -3,7 +3,12 @@ html, body {
     margin: 0%;
 }
 
-
+.profile-pic, .profile-pic1{
+    border-radius: 50%;
+    height: 200px;
+    width: 200px;
+    margin-top: 20px;
+}
 
 
 .loader-wrapper {
@@ -310,12 +315,13 @@ footer .fa-instagram {
 }
 
 @media screen and (max-width: 1330px) {
+    
 
     .result {
         top: 10px;
     }
 
-    header, header h1, header p {
+    header, header h1, header p, .profile-pic1 {
         height: 0%;
         display: none;
     }
