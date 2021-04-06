@@ -642,6 +642,12 @@ footer .fa-instagram {
 }
 
 @media screen and (max-width: 360px) {
+    .profile-pic, .profile-pic1{
+        border-radius: 50%;
+        height: 100px;
+        width: 100px;
+        margin-top: 20px;
+    }
     .gameboard {
         width: 300px;
         height: 300px;
@@ -674,18 +680,18 @@ footer .fa-instagram {
 
 
     aside h1, .about h1 {
-        font-size: 14px;
+        font-size: 18px;
     }
 
     aside, .about {
         width: 300px;
     }
     aside p, .about p {
-        font-size: 10px;
+        font-size: 14px;
     }
 
     footer {
-        font-size: 10px;
+        font-size: 12px;
     }
 
     footer .fa-instagram {
@@ -693,7 +699,7 @@ footer .fa-instagram {
     }
 
     .line-between {
-        margin-top: 10px;
+        margin-top: 100px;
         opacity: 50%;
     }
 
