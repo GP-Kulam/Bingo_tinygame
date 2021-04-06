@@ -302,14 +302,16 @@ aside h1, header h1, .about h1 {
 
 footer {
     position: relative;
-    top: 100px;
+    top: 40px;
     text-align: center;
     
 }
 
-footer .fa-instagram {
+footer .fa-instagram, 
+footer .fa-github,
+footer .fa-linkedin {
     position: relative;
-    top: 10px;
+    margin: 20px;
     font-size: 40px;
 }
 
@@ -692,7 +694,9 @@ footer .fa-instagram {
         font-size: 12px;
     }
 
-    footer .fa-instagram {
+    footer .fa-instagram,
+    footer .fa-github,
+footer .fa-linkedin {
         font-size: 40px;
         margin-bottom: 40px;
     }
